@@ -1,0 +1,6 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.logo {
+    @include textOptions($fontWeightMedium, 2rem, 2rem, $whiteColor);
+}

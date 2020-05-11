@@ -1,0 +1,26 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.footer {
+    display: flex;
+    align-items: center;
+    height: 72px;
+    background-color: $blackColor;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer__copyright {
+    @include textOptions($fontWeightRegular, 1rem, 1.5rem, $whiteColor);
+    margin-right: 32px;
+}
+
+.footer__link svg {
+    fill: $whiteColor;
+}
+

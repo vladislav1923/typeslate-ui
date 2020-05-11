@@ -1,11 +1,10 @@
-.Shell {
+.shell {
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
-.Shell main {
-    display: flex;
-    flex-direction: column;
+.shell__main {
     flex-grow: 1;
+    padding-top: 40px;
 }

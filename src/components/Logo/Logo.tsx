@@ -1,8 +1,5 @@
 import React from 'react';
-import './Logo.css';
+import './Logo.scss';
+import '../../index.scss';
 
-export default () => (
-    <span className="logo">
-        Typeslate
-    </span>
-);
+export default () => <span className="logo">Typeslate</span>;
