@@ -8,11 +8,11 @@ export class Shell extends Component {
     public render() {
         return (
             <div className="shell">
-                <header>
+                <header className="shell__header">
                     <Header/>
                 </header>
 
-                <main className="shell__main container">
+                <main className="shell__main">
                     { this.props.children }
                 </main>
 
