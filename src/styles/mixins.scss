@@ -1,4 +1,5 @@
-@mixin textOptions($weight, $size, $lineHeight, $color) {
+@mixin textOptions($family, $weight, $size, $lineHeight, $color) {
+  font-family: $family;
   font-weight: $weight;
   font-size: $size;
   line-height: $lineHeight;

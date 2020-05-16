@@ -1,24 +1,21 @@
 import React, {Component} from 'react';
 import './Shell.scss';
-import {Header} from '../../components/Header/Header';
-import {Footer} from '../../components/Footer/Footer';
+import {Nav} from '../../components/Nav/Nav';
 
 export class Shell extends Component {
 
     public render() {
         return (
             <div className="shell">
-                <header className="shell__header">
-                    <Header/>
-                </header>
+
+                <nav className="shell__nav">
+                    <Nav />
+                </nav>
 
                 <main className="shell__main">
                     { this.props.children }
                 </main>
 
-                <footer>
-                    <Footer />
-                </footer>
             </div>
         )
     }

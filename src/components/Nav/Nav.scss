@@ -1,0 +1,13 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.nav {
+  width: 290px;
+  background-color: $darkBlueColor;
+  height: 100vh;
+}
+
+.nav__app-name {
+  @include textOptions($oswaldFont, 700, 48px, 52px, $turquoiseColor);
+  padding: 48px 32px 0 32px;
+}

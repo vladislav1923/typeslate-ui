@@ -1,18 +1,7 @@
 @import '../../styles/vars';
-@import '../../styles/mixins';
-
-.main__header {
-  @include textOptions($fontWeightBold, 24px, 32px, $blackColor);
-  margin: 40px 0;
-}
 
 .main__list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 40px;
-}
-
-.main__item {
-  margin-right: 32px;
-  margin-bottom: 32px;
+  padding: 52px 32px 32px 40px;
 }

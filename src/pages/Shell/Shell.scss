@@ -3,23 +3,11 @@
 
 .shell {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     height: 100vh;
-    background-color: $ultraLightGreyColor;
-
-    @include mobile {
-        height: calc(100vh + #{$headerHeight});
-    }
-}
-
-.shell__header {
-    @include mobile {
-        position: sticky;
-        top: 0;
-        z-index: 1;
-    }
 }
 
 .shell__main {
+    background-color: $lightGreyColor;
     flex-grow: 1;
 }

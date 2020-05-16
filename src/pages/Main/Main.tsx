@@ -28,8 +28,6 @@ class Main extends Component<RouteComponentProps & Props, State> {
 
         return (
             <div className="container">
-                <h1 className="main__header">Документация</h1>
-
                 <ul className="main__list">
                     <li className="main__item" onClick={this.onDocumentClick}>
                         <Document/>

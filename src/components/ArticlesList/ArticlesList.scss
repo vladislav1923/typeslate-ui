@@ -6,7 +6,7 @@
 }
 
 .articles-list__title {
-  @include textOptions($fontWeightMedium, 24px, 32px, $blackColor);
+  //@include textOptions($fontWeightMedium, 24px, 32px, $blackColor);
   padding: 0 16px 0 16px;
   margin-bottom: 40px;
 }
@@ -21,7 +21,7 @@
 }
 
 .articles-list__group {
-  @include textOptions($fontWeightMedium, 18px, 24px, $blackColor);
+  //@include textOptions($fontWeightMedium, 18px, 24px, $blackColor);
   padding: 16px 40px 16px 16px;
 
   position: relative;
@@ -39,7 +39,7 @@
 }
 
 .articles-list__article {
-  @include textOptions($fontWeightRegular, 16px, 22px, $blackColor);
+  //@include textOptions($fontWeightRegular, 16px, 22px, $blackColor);
   padding: 16px;
   cursor: pointer;
 
