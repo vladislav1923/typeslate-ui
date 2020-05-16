@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import './Article.scss';
 import Drawer from '@material-ui/core/Drawer';
-import Fab from '@material-ui/core/Fab';
-import DehazeIcon from '@material-ui/icons/Dehaze';
+// import Fab from '@material-ui/core/Fab';
+// import DehazeIcon from '@material-ui/icons/Dehaze';
 import {ArticlesList} from '../../components/ArticlesList/ArticlesList';
 
 type Props = {
