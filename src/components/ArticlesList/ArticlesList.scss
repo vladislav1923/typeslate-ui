@@ -1,0 +1,49 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+.articles-list {
+  padding: 48px 56px 16px 0;
+}
+
+.articles-list__title {
+  @include textOptions($fontWeightMedium, 24px, 32px, $blackColor);
+  padding: 0 16px 0 16px;
+  margin-bottom: 40px;
+}
+
+.articles-list__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.articles-list__item {
+}
+
+.articles-list__group {
+  @include textOptions($fontWeightMedium, 18px, 24px, $blackColor);
+  padding: 16px 40px 16px 16px;
+
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $whiteColor;
+  }
+}
+
+.articles-list__group-arrow {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.articles-list__article {
+  @include textOptions($fontWeightRegular, 16px, 22px, $blackColor);
+  padding: 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $whiteColor;
+  }
+}
