@@ -27,7 +27,7 @@ class Main extends Component<RouteComponentProps & Props, State> {
         console.log(this.props);
 
         return (
-            <div className="container">
+            <div>
                 <ul className="main__list">
                     <li className="main__item" onClick={this.onDocumentClick}>
                         <Document/>

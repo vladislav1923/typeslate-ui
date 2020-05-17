@@ -4,10 +4,21 @@
 .shell {
     display: flex;
     justify-content: space-between;
-    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    min-width: 320px;
+}
+
+.shell__nav {
+    min-height: 100vh;
+    background-color: $darkBlueColor;
 }
 
 .shell__main {
     background-color: $lightGreyColor;
     flex-grow: 1;
+
+    @include mobile {
+        min-width: calc(100% - #{$mobileControlsWidth});
+    }
 }

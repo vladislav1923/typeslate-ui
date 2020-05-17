@@ -2,12 +2,72 @@
 @import '../../styles/mixins';
 
 .nav {
+  min-height: 100vh;
+}
+
+.nav__not-mobile {
+  display: flex;
+  justify-content: space-between;
   width: 290px;
-  background-color: $darkBlueColor;
-  height: 100vh;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.nav__mobile {
+  display: none;
+  justify-content: space-between;
+
+  @include mobile {
+    display: flex;
+  }
+}
+
+.nav__not-mobile-content {
+
+}
+
+.nav__mobile-slider {
+  width: 0;
+  transition: all 0.3s;
+  overflow: hidden;
+
+  &--active {
+    width: 200px;
+  }
+}
+
+.nav__mobile-content {
+  width: 200px;
+}
+
+
+.nav__mobile-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: $mobileControlsWidth;
+  padding: 48px 10px 0;
+}
+
+.nav__mobile-control {
+  margin-bottom: 32px;
+}
+
+.nav__mobile-menu-icon {
+  fill: $whiteColor !important;
+  height: 40px !important;
+  width: 40px !important;
 }
 
 .nav__app-name {
-  @include textOptions($oswaldFont, 700, 48px, 52px, $turquoiseColor);
+  @include textOptions($oswaldFont, 700, 4.8rem, 5.2rem, $turquoiseColor);
   padding: 48px 32px 0 32px;
+
+  &--mobile {
+    padding: 0;
+  }
 }
