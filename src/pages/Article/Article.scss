@@ -16,11 +16,10 @@
 
 .article__content-title {
   @include textOptions($heeboFont, 500, 5.2rem, 6rem, $darkBlueColor);
-  text-align: center;
   margin-bottom: 32px;
 
-  @include mobile {
-    text-align: left;
+  @include desktop {
+    text-align: center;
   }
 }
 

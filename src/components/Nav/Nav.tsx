@@ -3,6 +3,7 @@ import './Nav.scss';
 import {NavLink} from 'react-router-dom';
 import ListIcon from '@material-ui/icons/List';
 import CloseIcon from '@material-ui/icons/Close';
+import {ArticlesList} from '../ArticlesList/ArticlesList';
 
 type Props = {}
 
@@ -29,27 +30,41 @@ export class Nav extends Component<Props, State> {
             <div className="nav">
                 <div className="nav__not-mobile">
                     <div className="nav__not-mobile-content">
-                        <NavLink to="/" style={{'textDecoration': 'none'}}>
-                            <p className="nav__app-name">Typeslate.</p>
-                        </NavLink>
+                        <div className="nav__app-name-wrapper">
+                            <NavLink to="/" style={{'textDecoration': 'none'}}>
+                                <p className="nav__app-name">Typeslate.</p>
+                            </NavLink>
+                        </div>
+
+                        <div className="nav__articles-list-wrapper">
+                            <ArticlesList />
+                        </div>
                     </div>
                 </div>
                 <div className="nav__mobile">
                     <div className={this.state.isMobileMenuOpen ? 'nav__mobile-slider nav__mobile-slider--active' : 'nav__mobile-slider'}>
                         <div className="nav__mobile-content">
-                            <NavLink to="/" style={{'textDecoration': 'none'}}>
-                                <p className="nav__app-name">Typeslate.</p>
-                            </NavLink>
+                            <div className="nav__app-name-wrapper">
+                                <NavLink to="/" style={{'textDecoration': 'none'}}>
+                                    <p className="nav__app-name">Typeslate.</p>
+                                </NavLink>
+                            </div>
+
+                            <div className="nav__articles-list-wrapper">
+                                <ArticlesList />
+                            </div>
                         </div>
                     </div>
                     <div className="nav__mobile-controls">
-                        {!this.state.isMobileMenuOpen &&
-                            <div className="nav__mobile-control">
-                                <NavLink to="/" style={{'textDecoration': 'none'}}>
-                                    <p className="nav__app-name nav__app-name--mobile">T.</p>
-                                </NavLink>
+                        <div className="nav__mobile-control">
+                            <div className="nav__app-name-wrapper nav__app-name-wrapper--mobile">
+                                {!this.state.isMobileMenuOpen &&
+                                    <NavLink to="/" style={{'textDecoration': 'none'}}>
+                                        <p className="nav__app-name">T.</p>
+                                    </NavLink>
+                                }
                             </div>
-                        }
+                        </div>
 
                         <div className="nav__mobile-control" onClick={() => this.onToggleMobileMenu()}>
                             {this.state.isMobileMenuOpen ? <CloseIcon className="nav__mobile-menu-icon" /> : <ListIcon className="nav__mobile-menu-icon" />}

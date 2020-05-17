@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Collapse from '@material-ui/core/Collapse';
 import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
 import './ArticlesList.scss';
+import {NavLink} from 'react-router-dom';
 
 type Props = {
 
@@ -29,22 +29,22 @@ export class ArticlesList extends Component<Props, State> {
     public render() {
         return (
             <div className="articles-list">
-                <h2 className="articles-list__title">Документация Typescript</h2>
-
                 <ul className="articles-list__list">
                     <li className="articles-list__item">
-                        <p className="articles-list__group">Sent mail</p>
+                        <NavLink to="/article/111" style={{'textDecoration': 'none'}}>
+                            <p className="articles-list__group">Sent mail</p>
+                        </NavLink>
                     </li>
                     <li className="articles-list__item">
-                        <p className="articles-list__group">Sent mailSent mailSent mailSent mail</p>
+                        <NavLink to="/article/111" style={{'textDecoration': 'none'}}>
+                             <p className="articles-list__group">Sent mailSent mailSent mailSent mail</p>
+                        </NavLink>
                     </li>
                     <li className="articles-list__item">
                         <p className="articles-list__group" onClick={this.onDrawerToggle}>
                             Sent mailSent mailSent mailSent mail
 
-                            <span className="articles-list__group-arrow">
-                                {this.state.isOpen ? <ExpandLess /> : <ExpandMore />}
-                            </span>
+                            <ExpandLess className={ 'articles-list__group-arrow' + (this.state.isOpen ? '' : ' articles-list__group-arrow--active')}/>
                         </p>
 
                         <Collapse in={this.state.isOpen} timeout="auto" unmountOnExit>
